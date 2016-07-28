@@ -1,0 +1,110 @@
+CHANGE LOG
+===================
+Version 3.1
+-Fixed issue that caused the MAMA primer to form a PCR pair with the reverse primer, rather than the forward primer
+-Fixed issue that caused incorrect reporting of oligos with the '_B' designation (e.g., genes with an ambiguous lagging strand)
+-Fixed issue that caused the reported mismatch location to be off by one
+-Added a module that outputs FASTA files of genes with the mismatches
+-Added a warning when a gene is present multiple times within the genome
+
+Version 3.0
+-Disabled BLASTing for organisms with closed genomes (searches scaffold instead)
+
+-Added option to report all possible oligos
+
+-Added a module to detect sequences with an increased chance for false positive MAMA screens
+-Added full compatability for Windows users
+-Adjusted file locations and directory structure
+
+-Fixed issue that caused incorrect reporting of the forward and reverse primers
+
+-Fixed issue that caused a fasta file with multiple genes to generate one csv output that continuously overwrote itself 
+
+
+
+
+Version 2.4.1
+-Fixed issue where the pcr product was not being checked for the restriction site
+
+Version 2.4
+
+-Modified length of oligo to be 90 every time
+
+-Fixed issue that caused inaccurate cutsite reporting in the excel file
+
+-Incorporated the design of a MAMA oligo
+
+
+
+
+
+Version 2.3
+
+-Added the ability to parse for combintation cut site and stop site
+
+-Fixed issue that caused lowercase sequences to not get parsed
+
+-Fixed issue that created oligos one nt shorter than they should have been
+
+
+
+Version 2.2
+-Fixed issue where csv files were not being saved to the correct location
+
+-Added feature that allows the user to select and parse other organisms
+
+
+
+Version 2.1
+
+-Fixed restriction mode oligos to capitalize only the mismatched bases
+
+-Fixed issue with restriction mode that would output a blank csv file if all the restriction sites were found within the pcr product
+
+
+
+Version 2.0
+
+-Added Restriction mode
+
+-Added a graphical user interface
+
+-Discontinued MAMA mode
+
+
+
+Version 1.3
+
+-Added ability for user to specify a genome
+
+
+
+Version 1.2
+
+-Fixed issue that blocked the return of a template strand MAMA-primer if neither a coding primer or the second screening primer were returned
+-Fixed error that was causing the template-strand dna parser to return mismatches without a t-t or a c-c
+-Added a testing script to check that the dna parsing is working correctly
+
+-Added a screen to remove patterns that have been associated with getting false positives in vitro
+-Added a container module for DNA-specific classes
+
+
+
+Version 1.1
+
+-Fixed issue where a template strand MAMA
+-primer was not being oriented 5'-3' if the oligo was also based on the template strand
+
+-Fixed issue where the closest possible primer to 60' was not always being returned
+
+-Fixed the 83mer oligo design so that only oligos of 83 in length could be returned
+
+-Fixed issue with the doublestop module creating an A-A mismatch
+
+-Added single-stop only mode
+
+-Changed output file naming method for genes that are not matched in the mm4 gene list
+
+-Changed output of the 83-mer to highlight the mismatched nucleotides
+
+-Added the ability to define the beginning and ending locations to search for mutations
